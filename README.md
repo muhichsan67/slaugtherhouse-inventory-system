@@ -105,10 +105,4 @@ Akun-akun tersebut dibuat oleh database seeder. Jalankan `php artisan migrate --
 
 8. Buka [http://127.0.0.1:8000](http://127.0.0.1:8000), lalu masuk menggunakan salah satu akun demo di atas.
 
-### Menjalankan test
-
-```powershell
-php artisan test
-```
-
-> **Catatan:** `documentation\rph_inventory.sql` adalah referensi skema dan data MySQL. Skrip tersebut menghapus lalu membuat ulang tabelnya; untuk instalasi lokal biasa, gunakan migrasi dan seeder Laravel seperti langkah di atas. Test otomatis proyek dapat menggunakan SQLite in-memory sesuai konfigurasi PHPUnit.
+> **Catatan:** `information\rph_inventory.sql` adalah referensi skema dan data MySQL. Skrip tersebut menghapus lalu membuat ulang tabelnya; untuk instalasi lokal biasa, gunakan migrasi dan seeder Laravel seperti langkah di atas.
