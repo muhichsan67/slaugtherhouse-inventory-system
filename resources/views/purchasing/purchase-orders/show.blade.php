@@ -18,14 +18,22 @@
             @if ($purchaseOrder->status === 'draft')
                 <a class="btn btn-outline-primary" href="{{ route('purchase-orders.edit', $purchaseOrder) }}">Edit draft</a>
                 <form method="POST" action="{{ route('purchase-orders.approve', $purchaseOrder) }}"
-                    data-confirm="Approve this purchase order?">
+                    data-confirm="This will approve the purchase order and allow the warehouse to receive it."
+                    data-confirm-title="Approve purchase order?"
+                    data-confirm-text="Yes, approve"
+                    data-confirm-type="success"
+                    data-confirm-icon="check-circle">
                     @csrf
                     <button class="btn btn-primary" type="submit">Approve</button>
                 </form>
             @endif
             @if (in_array($purchaseOrder->status, ['draft', 'approved'], true))
                 <form method="POST" action="{{ route('purchase-orders.cancel', $purchaseOrder) }}"
-                    data-confirm="Cancel this purchase order?">
+                    data-confirm="This will cancel the purchase order."
+                    data-confirm-title="Cancel purchase order?"
+                    data-confirm-text="Yes, cancel"
+                    data-confirm-type="danger"
+                    data-confirm-icon="x-circle">
                     @csrf
                     <button class="btn btn-outline-danger" type="submit">Cancel</button>
                 </form>

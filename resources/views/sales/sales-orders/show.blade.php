@@ -17,13 +17,23 @@
         <div class="d-flex flex-wrap gap-2">
             @if ($salesOrder->status === 'draft')
                 <a class="btn btn-outline-primary" href="{{ route('sales-orders.edit', $salesOrder) }}">Edit draft</a>
-                <form method="POST" action="{{ route('sales-orders.confirm', $salesOrder) }}" data-confirm="Confirm this sales order?">
+                <form method="POST" action="{{ route('sales-orders.confirm', $salesOrder) }}"
+                    data-confirm="This will confirm the sales order and allow the warehouse to deliver it."
+                    data-confirm-title="Confirm sales order?"
+                    data-confirm-text="Yes, confirm"
+                    data-confirm-type="success"
+                    data-confirm-icon="check-circle">
                     @csrf
                     <button class="btn btn-primary" type="submit">Confirm</button>
                 </form>
             @endif
             @if (in_array($salesOrder->status, ['draft', 'confirmed'], true))
-                <form method="POST" action="{{ route('sales-orders.cancel', $salesOrder) }}" data-confirm="Cancel this sales order?">
+                <form method="POST" action="{{ route('sales-orders.cancel', $salesOrder) }}"
+                    data-confirm="This will cancel the sales order."
+                    data-confirm-title="Cancel sales order?"
+                    data-confirm-text="Yes, cancel"
+                    data-confirm-type="danger"
+                    data-confirm-icon="x-circle">
                     @csrf
                     <button class="btn btn-outline-danger" type="submit">Cancel</button>
                 </form>
