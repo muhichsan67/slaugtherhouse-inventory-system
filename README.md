@@ -44,7 +44,7 @@ Akun-akun tersebut dibuat oleh database seeder. Jalankan `php artisan migrate --
 1. Buka PowerShell dan masuk ke folder proyek. Jika belum memiliki salinan proyek, clone repositori:
 
    ```powershell
-   git clone <URL_REPOSITORY>
+   git clone https://github.com/muhichsan67/slaugtherhouse-inventory-system
    cd slaugtherhouse-inventory-system
    ```
 
