@@ -13,7 +13,7 @@ Fitur General Ledger, Trial Balance, jurnal, akun, dan stock opname tidak termas
 
 ## Demo aplikasi
 
-[Buka demo aplikasi](https://demo.example.com) *(placeholder — ganti dengan URL demo yang aktif)*.
+[Buka demo aplikasi](https://faturasya.my.id)
 
 ## Akun demo
 
